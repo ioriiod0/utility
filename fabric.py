@@ -2,8 +2,8 @@ from fabric.api import env,run,cd
 from fabric.operations import put
 
 env.hosts = ["10.0.2.%d" % i for i in range(5,225) ]
-env.password = "ooxx"
 env.user = "root"
+env.password = "ooxx"
 env.warn_only = True
 
 def upload():
