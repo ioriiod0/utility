@@ -16,8 +16,11 @@ def update():
                 run('rpm -Uvh *.rpm')
 
 def upload_and_update():
-        upload()
-        update()
+        try:
+                upload()
+                update()
+        except Exception,e:
+                print e
 
 def info():
         run('rpm -qi ooxx')
